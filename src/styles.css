@@ -1,0 +1,55 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #00aaff, #00ff6c);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.calculator {
+  max-width: 24rem;
+  margin-inline: auto;
+}
+
+.output {
+  display: grid;
+  grid-template-columns: minmax(7rem, auto);
+  color: #fff;
+}
+
+.output > * {
+  width: 100%;
+  height: 3rem;
+  background-color: #1a1a1a;
+}
+
+.input {
+  display: grid;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: repeat(5, 6rem);
+}
+
+.input > * {
+  background-color: #98abb4;
+  border: thin solid rgba(79, 89, 94, 0.671);
+}
+
+.input > :is(*:first-child, *:last-child) {
+  grid-column: span 2;
+  width: 100%;
+}
